@@ -1,6 +1,6 @@
 {
   "name": "Password Generator",
-  "description": "Password Generator",
+  "description": "Generate random password using your browser javascript engine",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
