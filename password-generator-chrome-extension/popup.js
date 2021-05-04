@@ -12,6 +12,7 @@ passwordGeneratorButton.addEventListener('click', generatePassword);
 lettersLengthInput.addEventListener('change', generatePassword);
 numbersLengthInput.addEventListener('change', generatePassword);
 symbolsLengthInput.addEventListener('change', generatePassword);
+generatePassword();
 
 function generatePassword() {
   var newPassword = '';
