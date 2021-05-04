@@ -15,6 +15,7 @@ symbolsLengthInput.addEventListener('change', generatePassword);
 generatePassword();
 
 function generatePassword() {
+  // code inspiration: https://stackoverflow.com/questions/9719570/generate-random-password-string-with-requirements-in-javascript
   var newPassword = '';
   for (i = 0; i < lettersLengthInput.value; i++) {
     newPassword += LETTERS.charAt(Math.floor(Math.random() * LETTERS.length));
@@ -32,14 +33,13 @@ function generatePassword() {
     newPassword[i] = newPassword[j];
     newPassword[j] = x;
   }
-
   newPassword = newPassword.join('');
   generatedPassword.innerHTML = newPassword;
   copyPassword();
 }
 
 function copyPassword() {
-  // code ref: https://stackoverflow.com/questions/49236100/copy-text-from-span-to-clipboard
+  // code inspiration: https://stackoverflow.com/questions/49236100/copy-text-from-span-to-clipboard
   var tmpTextArea = document.createElement('textarea');
   tmpTextArea.value = generatedPassword.textContent;
   document.body.appendChild(tmpTextArea);
