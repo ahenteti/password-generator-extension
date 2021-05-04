@@ -26,18 +26,22 @@ header span {
 }
 
 main {
+  min-width: 200px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 10px;
 }
 
 .generated-password {
+  font-family: 'Roboto Mono';
   margin-right: 10px;
   font-size: 16px;
   font-weight: arial;
   padding: 8px 15px;
   background-color: #eee;
   border-radius: 2px;
+  white-space: nowrap;
 }
 
 .password-generator-button {
