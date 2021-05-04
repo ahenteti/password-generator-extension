@@ -31,6 +31,18 @@ function generatePassword() {
     newPassword[i] = newPassword[j];
     newPassword[j] = x;
   }
+
   newPassword = newPassword.join('');
   generatedPassword.innerHTML = newPassword;
+  copyPassword();
+}
+
+function copyPassword() {
+  // code ref: https://stackoverflow.com/questions/49236100/copy-text-from-span-to-clipboard
+  var tmpTextArea = document.createElement('textarea');
+  tmpTextArea.value = generatedPassword.textContent;
+  document.body.appendChild(tmpTextArea);
+  tmpTextArea.select();
+  document.execCommand('Copy');
+  tmpTextArea.remove();
 }
