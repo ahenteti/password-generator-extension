@@ -1,5 +1,13 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  padding: 10px;
+  padding: 20px;
   font-family: Roboto;
 }
 
@@ -27,21 +35,53 @@ header span {
 
 main {
   min-width: 200px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 10px;
 }
 
+label {
+  white-space: nowrap;
+  font-size: 13.5px;
+}
+
+input {
+  padding: 5px 2px 5px 10px;
+  width: 60px;
+  outline: none;
+  border: none;
+  background-color: #eee;
+  border-radius: 2px;
+  border-bottom: 2px solid #eee;
+  transition: 0.2s border-color ease-in;
+}
+
+input:active,
+input:focus {
+  border-color: #078eed;
+}
+
 .generated-password {
   font-family: 'Roboto Mono';
-  margin-right: 10px;
+  margin-right: 20px;
   font-size: 16px;
   font-weight: arial;
   padding: 8px 15px;
   background-color: #eee;
   border-radius: 2px;
   white-space: nowrap;
+}
+
+.generate-password-section {
+  margin-top: 20px;
+  border-top: 2px solid #ddd;
+  padding-top: 20px;
 }
 
 .password-generator-button {
