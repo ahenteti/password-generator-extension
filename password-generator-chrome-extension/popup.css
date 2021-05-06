@@ -67,6 +67,11 @@ input:focus {
   border-color: #078eed;
 }
 
+input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+}
+
 .generated-password {
   font-family: 'Roboto Mono';
   margin-right: 20px;
