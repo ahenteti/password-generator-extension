@@ -8,16 +8,20 @@ var COPY_PASSWORD_INITIAL_VALUE = true;
 
 var generatedPassword = document.getElementById('generatedPassword');
 var passwordGeneratorButton = document.getElementById('passwordGeneratorButton');
+var copyPasswordButton = document.getElementById('copyPasswordButton');
 var lettersLengthInput = document.getElementById('lettersLengthInput');
 var numbersLengthInput = document.getElementById('numbersLengthInput');
 var symbolsLengthInput = document.getElementById('symbolsLengthInput');
 var copyPasswordCheckboxInput = document.getElementById('copyPasswordCheckboxInput');
+var copiedToClipboardMessage = document.getElementById('copiedToClipboardMessage');
+var copiedToClipboardMessageTimeout = null;
 
 initLettersLengthInputValue();
 initNumbersLengthInputValue();
 initSymbolsLengthInputValue();
 initCopyPasswordCheckboxInput();
 passwordGeneratorButton.addEventListener('click', generatePassword);
+copyPasswordButton.addEventListener('click', copyPassword);
 lettersLengthInput.addEventListener('change', generatePassword);
 lettersLengthInput.addEventListener('change', updateLettersLengthLocalStorageValue);
 numbersLengthInput.addEventListener('change', generatePassword);
@@ -48,11 +52,10 @@ function generatePassword() {
   }
   newPassword = newPassword.join('');
   generatedPassword.innerText = newPassword;
-  copyPassword();
+  if (copyPasswordCheckboxInput.checked) copyPassword();
 }
 
 function copyPassword() {
-  if (!copyPasswordCheckboxInput.checked) return;
   // code inspiration: https://stackoverflow.com/questions/49236100/copy-text-from-span-to-clipboard
   var tmpTextArea = document.createElement('textarea');
   tmpTextArea.value = generatedPassword.textContent;
@@ -60,6 +63,11 @@ function copyPassword() {
   tmpTextArea.select();
   document.execCommand('Copy');
   tmpTextArea.remove();
+  copiedToClipboardMessage.classList.add('show');
+  clearTimeout(copiedToClipboardMessageTimeout);
+  copiedToClipboardMessageTimeout = setTimeout(function () {
+    copiedToClipboardMessage.classList.remove('show');
+  }, 2000);
 }
 
 function initLettersLengthInputValue() {

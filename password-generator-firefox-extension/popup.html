@@ -33,26 +33,48 @@
       </section>
       <section class="generate-password-section">
         <div class="row">
-          <span id="generatedPassword" class="generated-password">As9*1:drUis%=+ZW</span>
-          <svg
-            title="Regenerate Random Password"
-            id="passwordGeneratorButton"
-            class="password-generator-button"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            aria-hidden="true"
-            focusable="false"
-            width="1em"
-            height="1em"
-            style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg)"
-            preserveAspectRatio="xMidYMid meet"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273c-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556c4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504C119.034 504 8.001 392.967 8 256.002C7.999 119.193 119.646 7.755 256.455 8z"
-              fill="#DA4026"
-            />
-          </svg>
+          <div class="generated-password-container">
+            <span id="generatedPassword" class="generated-password">As9*1:drUis%=+ZW</span>
+            <span id="copiedToClipboardMessage" class="copied-to-clipboard-message">Copied</span>
+          </div>
+          <div class="password-buttons">
+            <svg
+              title="Copy Password"
+              id="copyPasswordButton"
+              class="copy-password-button"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              focusable="false"
+              width="1em"
+              height="1em"
+              style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg)"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 512 512"
+            >
+              <path d="M456 480H136a24 24 0 0 1-24-24V128a16 16 0 0 1 16-16h328a24 24 0 0 1 24 24v320a24 24 0 0 1-24 24z" fill="#626262" />
+              <path d="M112 80h288V56a24 24 0 0 0-24-24H60a28 28 0 0 0-28 28v316a24 24 0 0 0 24 24h24V112a32 32 0 0 1 32-32z" fill="#626262" />
+            </svg>
+            <svg
+              title="Regenerate Random Password"
+              id="passwordGeneratorButton"
+              class="password-generator-button"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true"
+              focusable="false"
+              width="1em"
+              height="1em"
+              style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg)"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M256.455 8c66.269.119 126.437 26.233 170.859 68.685l35.715-35.715C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.75c-30.864-28.899-70.801-44.907-113.23-45.273c-92.398-.798-170.283 73.977-169.484 169.442C88.764 348.009 162.184 424 256 424c41.127 0 79.997-14.678 110.629-41.556c4.743-4.161 11.906-3.908 16.368.553l39.662 39.662c4.872 4.872 4.631 12.815-.482 17.433C378.202 479.813 319.926 504 256 504C119.034 504 8.001 392.967 8 256.002C7.999 119.193 119.646 7.755 256.455 8z"
+                fill="#DA4026"
+              />
+            </svg>
+          </div>
         </div>
       </section>
     </main>
