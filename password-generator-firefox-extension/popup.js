@@ -118,9 +118,9 @@ function updateSymbolsLengthLocalStorageValue() {
 function initCopyPasswordCheckboxInput() {
   browser.storage.local.get(['COPY_PASSWORD_LOCAL_STORAGE_KEY'], function (result) {
     if (result) {
-      copyPasswordCheckboxInput.value = result.COPY_PASSWORD_LOCAL_STORAGE_KEY;
+      copyPasswordCheckboxInput.checked = result.COPY_PASSWORD_LOCAL_STORAGE_KEY;
     } else {
-      copyPasswordCheckboxInput.value = COPY_PASSWORD_INITIAL_VALUE;
+      copyPasswordCheckboxInput.checked = COPY_PASSWORD_INITIAL_VALUE;
       updateCopyPasswordLocalStorageValue();
     }
   });
